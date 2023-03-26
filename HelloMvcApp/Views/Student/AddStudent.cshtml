@@ -1,0 +1,31 @@
+﻿@model Ogrenci
+@{
+    ViewData["Title"] = "AddStudent";
+}
+<h1>Öğrenci Ekleme</h1>
+<form asp-controller="Student" asp-action="AddStudent" method="post">
+    <div class="mb-3">
+        <label class="form-label">Öğrenci Adı</label>
+        <input class="form-control" type="text" asp-for="Ad" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Soyadı</label>
+        <input class="form-control" type="text" asp-for="Soyad" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Numarası</label>
+        <input class="form-control" type="text" asp-for="Numara" />
+    </div>
+    <input type="submit" class="btn btn-success" value="Kaydet" />
+</form>
+
+@if (TempData["sonuc"] != null && (bool)TempData["sonuc"])
+{
+    <script>
+        alert('Ekleme İşlemi Başarılı!');
+    </script>
+}
+
+
+@*Modal Binding*@
+

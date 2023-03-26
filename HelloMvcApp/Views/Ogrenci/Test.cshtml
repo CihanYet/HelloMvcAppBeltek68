@@ -1,0 +1,23 @@
+﻿@model InfoDTO
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+</head>
+<body>
+    <h3>Test View</h3>
+    @*<p>@(((Ogrenci)(ViewData["Student"])).ToString())</p>
+    <p>@ViewBag.Ogrenci.ToString()</p>
+    <p>@Model.ToString()</p>*@
+
+    @if (Model != null && Model.Ogrenci != null)
+    {
+        <p>@Model.Ogrenci.Ad</p>
+    }
+
+</body>
+</html>
