@@ -36,10 +36,7 @@ namespace HelloMvcApp.Controllers
                 {
                     TempData["sonuc"] = true;
                 }
-                else
-                {
-                    TempData["sonuc"] = null;
-                }
+               
             }
             return RedirectToAction("Index");
         }
